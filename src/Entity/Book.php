@@ -20,6 +20,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity
  * @ApiResource(
  *     normalizationContext={"groups": {"book:read"}},
+ *     mercure=true,
  *     collectionOperations={
  *         "get",
  *         "post",
@@ -27,7 +28,15 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     itemOperations={
  *         "get",
  *         "put",
+ *         "patch",
  *         "delete",
+ *         "generate_cover"={
+ *             "method"="PUT",
+ *             "path"="/books/{id}/generate-cover",
+ *             "output"=false,
+ *             "messenger"=true,
+ *             "normalizationContext"={"groups"={"book:read", "book:cover"}}
+ *         },
  *     }
  * )
  * @ApiFilter(PropertyFilter::class)
