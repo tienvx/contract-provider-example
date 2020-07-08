@@ -10,7 +10,8 @@ extensions:
             PACT_PROVIDER_VERSION: 1.0.0
             PACT_PROVIDER_BASE_URL: http://127.0.0.1:8000
             PACT_PUBLISH_VERIFICATION_RESULTS: true
-        - CodeceptionPactPhp\Extension\PactVerify
+        - CodeceptionPactPhp\Extension\PactVerify:
+            all: true
 modules:
     enabled:
         - Asserts
