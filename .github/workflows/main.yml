@@ -24,8 +24,7 @@ jobs:
     - name: Set Up Container
       run: |
         apk add --no-cache bash
-        wget https://get.symfony.com/cli/installer -O - | bash
-        export PATH="$HOME/.symfony/bin:$PATH"
+        wget https://get.symfony.com/cli/installer -O - | bash -s -- --install-dir=/usr/bin
         curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
         composer global require hirak/prestissimo > /dev/null
 
