@@ -41,7 +41,6 @@ class ReviewFixtures extends Fixture implements FixtureGroupInterface
             $review->rating = $faker->numberBetween(0, 5);
             $review->author = $faker->name;
             $review->publicationDate = $faker->dateTime;
-            $review->setBook($this->getReference($faker->randomElement(BookFixtures::$uuids)));
             $manager->persist($review);
 
             $this->addReference($uuid, $review);

@@ -5,13 +5,14 @@ namespace App\DataFixtures;
 use App\Entity\Book;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\Id\AssignedGenerator;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Faker\Factory;
 use Ramsey\Uuid\Uuid;
 
-class BookFixtures extends Fixture implements FixtureGroupInterface
+class BookFixtures extends Fixture implements FixtureGroupInterface, DependentFixtureInterface
 {
     public static $uuids = [
         '1065838a-1ba3-4469-bfa5-96ad7b720df5',
@@ -40,6 +41,9 @@ class BookFixtures extends Fixture implements FixtureGroupInterface
             $book->description = $faker->paragraph;
             $book->author = $faker->name;
             $book->publicationDate = $faker->dateTime;
+            foreach ($faker->randomElements(ReviewFixtures::$uuids, $faker->numberBetween(1, count(ReviewFixtures::$uuids))) as $reviewUuid) {
+                $book->addReview($this->getReference($reviewUuid));
+            }
             $manager->persist($book);
 
             $this->addReference($uuid, $book);
@@ -51,5 +55,12 @@ class BookFixtures extends Fixture implements FixtureGroupInterface
     public static function getGroups(): array
     {
         return ['Book Fixtures Loaded'];
+    }
+
+    public function getDependencies()
+    {
+        return [
+            ReviewFixtures::class,
+        ];
     }
 }

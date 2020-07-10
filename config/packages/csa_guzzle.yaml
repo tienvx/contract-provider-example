@@ -4,7 +4,6 @@
 csa_guzzle:
     profiler: '%kernel.debug%'
     clients:
-        default: null
-#        my_client:
-#            config:
-#                base_uri: 'http://example.com'
+        imgflip:
+            config:
+                base_uri: 'https://api.imgflip.com'
