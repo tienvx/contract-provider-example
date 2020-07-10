@@ -24,8 +24,9 @@ class StatesController extends AbstractController
         $application->setAutoExit(false);
 
         $input = new ArrayInput([
-            // TODO Load fixtures by state
-            'command' => 'hautelook:fixtures:load',
+            // TODO Load only needed fixtures by both consumer and state
+            'command' => 'doctrine:fixtures:load',
+            '--group' => [$state],
             '--no-interaction' => true,
         ]);
 

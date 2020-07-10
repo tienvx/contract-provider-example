@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b21c3f14c4ba0747e9d01310d03c7a0",
+    "content-hash": "4c073bae04bf453b5313d672e73c679b",
     "packages": [
         {
             "name": "api-platform/api-pack",
@@ -4200,6 +4200,64 @@
                 }
             ],
             "time": "2020-06-26T12:18:43+00:00"
+        },
+        {
+            "name": "symfony-bundles/json-request-bundle",
+            "version": "v3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-bundles/json-request-bundle.git",
+                "reference": "649e9da58ab574d528ad1b6fe874df5b331a6457"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony-bundles/json-request-bundle/zipball/649e9da58ab574d528ad1b6fe874df5b331a6457",
+                "reference": "649e9da58ab574d528ad1b6fe874df5b331a6457",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3",
+                "symfony/framework-bundle": "^4.3||^5.0"
+            },
+            "require-dev": {
+                "phpunit/php-code-coverage": "^5.0",
+                "phpunit/phpunit": "^6.4",
+                "symfony/phpunit-bridge": "^4.3||^5.0",
+                "symfony/yaml": "^4.3||^5.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SymfonyBundles\\JsonRequestBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Khaperets",
+                    "email": "khaperets@gmail.com"
+                }
+            ],
+            "description": "Symfony JsonRequest Bundle",
+            "homepage": "https://github.com/symfony-bundles/json-request-bundle",
+            "keywords": [
+                "angular",
+                "bundle",
+                "json",
+                "symfony"
+            ],
+            "time": "2020-06-19T20:46:32+00:00"
         },
         {
             "name": "symfony/amqp-messenger",
@@ -9957,6 +10015,88 @@
             "time": "2020-05-25T19:45:03+00:00"
         },
         {
+            "name": "doctrine/doctrine-fixtures-bundle",
+            "version": "3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
+                "reference": "39defca57ee0949e1475c46177b30b6d1b732e8f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/39defca57ee0949e1475c46177b30b6d1b732e8f",
+                "reference": "39defca57ee0949e1475c46177b30b6d1b732e8f",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/data-fixtures": "^1.3",
+                "doctrine/doctrine-bundle": "^1.11|^2.0",
+                "doctrine/orm": "^2.6.0",
+                "doctrine/persistence": "^1.3",
+                "php": "^7.1",
+                "symfony/config": "^3.4|^4.3|^5.0",
+                "symfony/console": "^3.4|^4.3|^5.0",
+                "symfony/dependency-injection": "^3.4|^4.3|^5.0",
+                "symfony/doctrine-bridge": "^3.4|^4.1|^5.0",
+                "symfony/http-kernel": "^3.4|^4.3|^5.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "phpunit/phpunit": "^7.4",
+                "symfony/phpunit-bridge": "^4.1|^5.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Bundle\\FixturesBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Doctrine Project",
+                    "homepage": "http://www.doctrine-project.org"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony DoctrineFixturesBundle",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "Fixture",
+                "persistence"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdoctrine-fixtures-bundle",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-02T16:40:37+00:00"
+        },
+        {
             "name": "fzaninotto/faker",
             "version": "v1.9.1",
             "source": {
@@ -10005,74 +10145,6 @@
                 "fixtures"
             ],
             "time": "2019-12-12T13:22:17+00:00"
-        },
-        {
-            "name": "hautelook/alice-bundle",
-            "version": "2.7.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hautelook/AliceBundle.git",
-                "reference": "2f2005fcdb1a6181ba6db07db702ca3a3d8b47bc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hautelook/AliceBundle/zipball/2f2005fcdb1a6181ba6db07db702ca3a3d8b47bc",
-                "reference": "2f2005fcdb1a6181ba6db07db702ca3a3d8b47bc",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/data-fixtures": "^1.2",
-                "doctrine/doctrine-bundle": "^1.8 || ^2.0",
-                "doctrine/orm": "^2.5.11",
-                "doctrine/persistence": "^1.3.4",
-                "php": "^7.2",
-                "psr/log": "^1.0",
-                "symfony/finder": "^3.4 || ^4.0 || ^5.0",
-                "symfony/framework-bundle": "^3.4.24 || ^4.0 || ^5.0",
-                "theofidry/alice-data-fixtures": "^1.0"
-            },
-            "require-dev": {
-                "phpspec/prophecy": "^1.7",
-                "phpunit/phpunit": "^8.5",
-                "symfony/phpunit-bridge": "^3.4.31 || ^4.0 || ^5.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                },
-                "bin-dir": "bin",
-                "sort-packages": true
-            },
-            "autoload": {
-                "psr-4": {
-                    "Hautelook\\AliceBundle\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Baldur Rensch",
-                    "email": "brensch@gmail.com"
-                },
-                {
-                    "name": "Théo FIDRY",
-                    "email": "theo.fidry@gmail.com",
-                    "homepage": "https://github.com/theofidry"
-                }
-            ],
-            "description": "Symfony bundle to manage fixtures with Alice and Faker.",
-            "keywords": [
-                "Fixture",
-                "alice",
-                "faker",
-                "orm",
-                "symfony"
-            ],
-            "time": "2020-03-15T10:07:54+00:00"
         },
         {
             "name": "kelunik/certificate",
@@ -10425,87 +10497,6 @@
             "time": "2020-05-22T08:12:19+00:00"
         },
         {
-            "name": "nelmio/alice",
-            "version": "3.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nelmio/alice.git",
-                "reference": "d9a06e4b2e6ef274d4f572198e455cde993d87bb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/alice/zipball/d9a06e4b2e6ef274d4f572198e455cde993d87bb",
-                "reference": "d9a06e4b2e6ef274d4f572198e455cde993d87bb",
-                "shasum": ""
-            },
-            "require": {
-                "fzaninotto/faker": "^1.6",
-                "myclabs/deep-copy": "^1.5.2",
-                "php": "^7.3",
-                "sebastian/comparator": "^3.0 || ^4.0",
-                "symfony/property-access": "^2.8 || ^3.4 || ^4.0 || ^5.0",
-                "symfony/yaml": "^2.8 || ^3.4 || ^4.0 || ^5.0"
-            },
-            "conflict": {
-                "symfony/framework-bundle": "<3.4"
-            },
-            "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.1.0",
-                "php-mock/php-mock": "^2.0",
-                "phpspec/prophecy": "^1.6",
-                "phpspec/prophecy-phpunit": "^2.0",
-                "phpunit/phpunit": "^8.5.4 || ^9.0",
-                "symfony/phpunit-bridge": "^5.0",
-                "symfony/var-dumper": "^3.4 || ^4.0 || ^5.0"
-            },
-            "suggest": {
-                "theofidry/alice-data-fixtures": "Wrapper for Alice to provide a persistence layer."
-            },
-            "type": "library",
-            "extra": {
-                "bamarni-bin": {
-                    "bin-links": false
-                },
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/deep_clone.php"
-                ],
-                "psr-4": {
-                    "Nelmio\\Alice\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be"
-                },
-                {
-                    "name": "Tim Shelburne",
-                    "email": "shelburt02@gmail.com"
-                },
-                {
-                    "name": "Théo FIDRY",
-                    "email": "theo.fidry@gmail.com"
-                }
-            ],
-            "description": "Expressive fixtures generator",
-            "keywords": [
-                "Fixture",
-                "data",
-                "faker",
-                "test"
-            ],
-            "time": "2020-06-03T12:55:55+00:00"
-        },
-        {
             "name": "pact-foundation/pact-php",
             "version": "6.0.2",
             "source": {
@@ -10577,91 +10568,6 @@
                 "pact-php"
             ],
             "time": "2020-07-06T23:08:10+00:00"
-        },
-        {
-            "name": "theofidry/alice-data-fixtures",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/theofidry/AliceDataFixtures.git",
-                "reference": "f98ef1b7965f043a497a49e8221f3327f2835cea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/theofidry/AliceDataFixtures/zipball/f98ef1b7965f043a497a49e8221f3327f2835cea",
-                "reference": "f98ef1b7965f043a497a49e8221f3327f2835cea",
-                "shasum": ""
-            },
-            "require": {
-                "nelmio/alice": "^3.5",
-                "php": "^7.2",
-                "psr/log": "^1.0"
-            },
-            "conflict": {
-                "doctrine/orm": "<2.5",
-                "illuminate/database": "<5.5",
-                "ocramius/proxy-manager": "<2.1",
-                "symfony/framework-bundle": "<3.4"
-            },
-            "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.1",
-                "phpspec/prophecy": "^1.7",
-                "phpunit/phpunit": "^8.5.4 || ^9.0",
-                "symfony/phpunit-bridge": "^3.4 || ^4.0 || ^5.0"
-            },
-            "suggest": {
-                "alcaeus/mongo-php-adapter": "To use Doctrine with the MongoDB flavour",
-                "doctrine/data-fixtures": "To use Doctrine",
-                "doctrine/dbal": "To use Doctrine with the PHPCR flavour",
-                "doctrine/mongodb": "To use Doctrine with the MongoDB flavour",
-                "doctrine/mongodb-odm": "To use Doctrine with the MongoDB flavour",
-                "doctrine/orm": "To use Doctrine ORM",
-                "doctrine/phpcr-odm": "To use Doctrine with the PHPCR flavour",
-                "illuminate/database": "To use Eloquent",
-                "jackalope/jackalope-doctrine-dbal": "To use Doctrine with the PHPCR flavour",
-                "ocramius/proxy-manager": "To avoid database connection on kernel boot"
-            },
-            "type": "library",
-            "extra": {
-                "bamarni-bin": {
-                    "bin-links": false
-                },
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Fidry\\AliceDataFixtures\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Théo FIDRY",
-                    "email": "theo.fidry@gmail.com",
-                    "homepage": "https://github.com/theofidry"
-                }
-            ],
-            "description": "Nelmio alice extension to persist the loaded fixtures.",
-            "keywords": [
-                "Fixture",
-                "alice",
-                "data",
-                "faker",
-                "orm",
-                "tests"
-            ],
-            "funding": [
-                {
-                    "url": "https://github.com/theofidry",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-06-19T13:54:56+00:00"
         },
         {
             "name": "tienvx/codeception-pact-php-extension",
