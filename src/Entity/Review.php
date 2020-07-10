@@ -34,7 +34,7 @@ class Review
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator(class="Ramsey\Uuid\Doctrine\UuidGenerator")
      */
-    private ?UuidInterface $id;
+    public ?UuidInterface $id;
 
     /**
      * @var string The actual body of the review

@@ -1,0 +1,19 @@
+# Codeception Test Suite Configuration
+#
+# Suite for unit or integration tests.
+
+actor: UnitTester
+extensions:
+    enabled:
+        - CodeceptionPactPhp\Extension\Env:
+            PACT_PROVIDER_NAME: BookStore
+            PACT_PROVIDER_VERSION: 1.0.0
+            PACT_PROVIDER_BASE_URL: http://127.0.0.1:8000
+            PACT_PROVIDER_STATES_SETUP_URL: http://127.0.0.1:8000/states-setup
+            PACT_PUBLISH_VERIFICATION_RESULTS: true
+        - CodeceptionPactPhp\Extension\PactVerify:
+            all: true
+modules:
+    enabled:
+        - Asserts
+        - \App\Tests\Helper\Unit
