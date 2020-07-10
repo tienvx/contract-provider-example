@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7689bd8769835a5e003b1cc726aa078",
+    "content-hash": "2b21c3f14c4ba0747e9d01310d03c7a0",
     "packages": [
         {
             "name": "api-platform/api-pack",
@@ -10665,16 +10665,16 @@
         },
         {
             "name": "tienvx/codeception-pact-php-extension",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tienvx/codeception-pact-php-extension.git",
-                "reference": "3a09b299562bf655443cd1c0febdb580f75fcbf7"
+                "reference": "4e729685fc963375bce41c4d1785a8c8582b7fe5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tienvx/codeception-pact-php-extension/zipball/3a09b299562bf655443cd1c0febdb580f75fcbf7",
-                "reference": "3a09b299562bf655443cd1c0febdb580f75fcbf7",
+                "url": "https://api.github.com/repos/tienvx/codeception-pact-php-extension/zipball/4e729685fc963375bce41c4d1785a8c8582b7fe5",
+                "reference": "4e729685fc963375bce41c4d1785a8c8582b7fe5",
                 "shasum": ""
             },
             "require": {
@@ -10712,7 +10712,7 @@
                 "pact",
                 "pact-php"
             ],
-            "time": "2020-07-09T16:44:53+00:00"
+            "time": "2020-07-10T00:49:46+00:00"
         }
     ],
     "aliases": [],

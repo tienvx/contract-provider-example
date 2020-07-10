@@ -20,6 +20,26 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: php:7.4-cli-alpine
+    services:
+      mercure:
+        image: dunglas/mercure
+        env:
+          #ADDR: :80
+          JWT_KEY: '!ChangeMe!'
+          DEMO: 1
+          ALLOW_ANONYMOUS: 1
+          CORS_ALLOWED_ORIGINS: '*'
+          PUBLISH_ALLOWED_ORIGINS: http://mercure
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_USER: db_user
+          MYSQL_PASSWORD: db_password
+          MYSQL_DATABASE: db_name
+          MYSQL_ROOT_PASSWORD: root
+        #ports:
+          #- 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=5
     steps:
     - name: Set Up Container
       run: |
@@ -32,6 +52,8 @@ jobs:
         wget https://get.symfony.com/cli/installer -O - | bash -s -- --install-dir=/usr/bin
         curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
         composer global require hirak/prestissimo > /dev/null
+        apk add --no-cache $PHPIZE_DEPS
+        docker-php-ext-install pdo_mysql
 
     - name: Checkout
       uses: actions/checkout@master
@@ -39,9 +61,15 @@ jobs:
     - name: Install Dependencies
       run: composer install
 
+    - name: Start Server
+      run: |
+        echo "DATABASE_URL=mysql://db_user:db_password@mysql:3306/db_name?serverVersion=5.7" > .env.local
+        php bin/console doctrine:schema:create
+        php bin/console hautelook:fixtures:load
+        symfony serve --daemon
+
     - name: Test
       run: |
-        symfony serve --daemon
         ./vendor/bin/codecept build
         ./vendor/bin/codecept run
       env:
